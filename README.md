@@ -1,11 +1,11 @@
 
-# 🐳 Image Version Tracker
+# Image Version Tracker
 
 **Image Version Tracker** is a cloud computing course project that tracks and logs Docker image metadata. It allows querying this data through a REST API with support for filtering based on image size, creation date, and labels.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Extract metadata of all local Docker images using the Docker SDK for Python.
 - Log the extracted data to a JSON file.
@@ -17,7 +17,7 @@
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 Before running the project, ensure the following are installed:
 
@@ -27,13 +27,10 @@ Install Docker and make sure the Docker daemon is running.
 
 ```bash
 docker --version
+sudo systemctl start docker
 ```
 
-### 2. Python
-
-Python 3.8+ is recommended.
-
-### 3. Python Packages
+### 2. Python Packages
 
 Install required libraries using pip:
 
@@ -49,13 +46,13 @@ pip install docker flask
 .
 ├── docker_images.json       # Generated after image extraction
 ├── extract_images.py        # Script to extract Docker image metadata
-├── app.py                   # Flask API for querying image data
+├── rest_api.py              # Flask API for querying image data
 └── README.md
 ```
 
 ---
 
-## 🛠️ How to Run
+## How to Run
 
 ### Step 1: Extract Docker Image Data
 
@@ -72,16 +69,15 @@ This generates `docker_images.json` containing image metadata like ID, tag, crea
 Launch the REST API server:
 
 ```bash
-python app.py
+python rest_api.py
 ```
 
 This will:
 - Start the API at `http://127.0.0.1:5000`
-- Automatically open it in your default browser
 
 ---
 
-## 🌐 API Usage
+## API Usage
 
 ### Endpoint
 
@@ -117,26 +113,3 @@ GET /api/images
   `http://127.0.0.1:5000/api/images?start_date=2025-01-01&max_size=200000000&labels=python`
 
 ---
-
-## ✅ Troubleshooting
-
-- **Docker not found**:  
-  Ensure Docker is installed and the daemon is running:
-  ```bash
-  sudo systemctl start docker
-  ```
-
-- **No images listed**:  
-  Make sure you have at least one local Docker image using `docker images`.
-
-- **Permission errors**:  
-  Ensure your user has permission to access Docker:
-  ```bash
-  sudo usermod -aG docker $USER
-  ```
-
----
-
-## 📚 License
-
-This project is for educational use as part of a cloud computing course.
