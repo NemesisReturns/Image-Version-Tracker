@@ -1,0 +1,20 @@
+[
+    {
+        "id": "sha256:b32fa0454ca185102d4d2e8c7097c1478dba51eab18215c4599479fb44bf3d63",
+        "tag": "python:3.10-slim",
+        "short_id": "sha256:b32fa0454ca1",
+        "created": "2025-04-09 17:12:13",
+        "size_bytes": 127249717,
+        "virtual_size_bytes": 127249717,
+        "labels": {}
+    },
+    {
+        "id": "sha256:40479d8f9b6a095882edd3129b26fb093a9054d8f13eeed498f798f2ebd7dec2",
+        "tag": "python:3.11-slim",
+        "short_id": "sha256:40479d8f9b6a",
+        "created": "2025-04-09 17:12:13",
+        "size_bytes": 129873251,
+        "virtual_size_bytes": 129873251,
+        "labels": {}
+    }
+]
